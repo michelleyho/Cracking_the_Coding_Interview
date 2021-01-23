@@ -12,7 +12,7 @@ Time:O(n) - visit each character once
 Space: O(n) - since using hash table
 '''
 # TODO: no additonal data structures
-
+# TODO: more testcases
 def is_unique(word):
     if not word:
         return False
