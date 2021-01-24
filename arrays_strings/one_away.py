@@ -8,9 +8,12 @@ Follow up questions:
 '''
 
 '''
-Time:
-Space:
+Time: O(n)
+Space:O(1)
 '''
+
+# TODO: more test cases
+# Method #2?
 
 def one_away(s1, s2):
     if abs(len(s1) - len(s2)) > 1:
