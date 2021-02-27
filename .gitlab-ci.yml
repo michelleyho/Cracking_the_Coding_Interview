@@ -1,0 +1,21 @@
+image: "python:3.7"
+
+before_script:
+    - python --version
+    - pip install -r requirements.txt
+
+stages:
+    - Static Anaylsis
+
+pylint:
+    stage: Static Analysis
+    allow_failure: true
+    script:
+    - python -m pylint $(find . -name "*.py")
+
+flake8:
+    stage: Static Analysis
+    allow_failure: true
+    script:
+    -   python -m flake8 --statistics
+                        

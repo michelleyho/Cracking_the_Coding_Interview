@@ -1,0 +1,6 @@
+pip
+
+# Code Analysis
+pylint
+pycodestyle
+flake8
