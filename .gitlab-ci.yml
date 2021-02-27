@@ -12,10 +12,14 @@ pylint:
     allow_failure: true
     script:
     - python -m pylint $(find . -name "*.py")
+    tags:
+    - ctci
 
 flake8:
     stage: Static Analysis
     allow_failure: true
     script:
-    -   python -m flake8 --statistics
+    - python -m flake8 --statistics
+    tags:
+    - ctci
                         
