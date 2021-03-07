@@ -1,5 +1,11 @@
 pip
 
+# Code Test
+pytest
+
+# Code Coverage
+pytest-cov
+
 # Code Analysis
 pylint
 pycodestyle
