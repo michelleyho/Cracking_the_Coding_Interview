@@ -32,13 +32,32 @@ def palindrome_permutation(s):
         return count == 0
 
 
-if __name__ == "__main__":
-    s = "Tact Coa"
-    print palindrome_permutation(s)
-    s = "TactCoa"
-    print palindrome_permutation(s)
+def test_is_palindrome():
     s = "attccoa"
-    print palindrome_permutation(s)
+    assert palindrome_permutation(s)
+
+def test_is_palindrome_with_space():
+    s = "tact coa"
+    assert palindrome_permutation(s)
+
+def test_is_palindrome_with_mixed_case():
+    s = "TactCoa"
+    assert palindrome_permutation(s)
+
+def test_not_palindrome():
     s = "attccoad"
-    print palindrome_permutation(s)
+    assert not palindrome_permutation(s)
+
+def test_is_plaindromeempty_string():
+    s = ""
+    assert palindrome_permutation(s)
+
+def test_single_character():
+    s = "a"
+    assert palindrome_permutation(s)
+
+def test_with_punctuation():
+    s = "a;a"
+    assert palindrome_permutation(s)
+
 

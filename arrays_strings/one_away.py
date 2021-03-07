@@ -38,13 +38,25 @@ def one_away(s1, s2):
 
     return True 
 
-if __name__ == "__main__":
+def test_delete_one():
     s1, s2 = "pale", "ple"
-    print one_away(s1, s2)
+    assert one_away(s1, s2) == True
+
+def test_add_one():
     s1, s2 = "pales", "pale"
-    print one_away(s1, s2)
+    assert one_away(s1, s2) == True
+
+def test_edit_one():
     s1, s2 = "pale", "bale"
-    print one_away(s1, s2)
+    assert one_away(s1, s2) == True
+
+def test_two_edits():
     s1, s2 = "pale", "bae"
-    print one_away(s1, s2)
-    
+    assert one_away(s1, s2) == False
+
+def test_add_two():
+    s1, s2 = "pala", "palace"
+    assert not one_away(s1, s2)
+def test_no_edits():
+    s1, s2 = "pale", "pale"
+    assert one_away(s1, s2) == True

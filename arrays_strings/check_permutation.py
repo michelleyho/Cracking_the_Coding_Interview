@@ -31,19 +31,20 @@ def check_permutation(word1, word2):
 
     return False if h else True
 
-if __name__ == "__main__":
-    
+def test_is_permutation():
     s1, s2 = "abde", "edba"
-    print check_permutation(s1, s2)
+    assert check_permutation(s1, s2) == True
 
+def test_not_permutation():
     s1, s2 = "abde", "abdee"
-    print check_permutation(s1, s2)
-    
-    s1, s2 = "abde", ""
-    print check_permutation(s1, s2)
-    
-    s1, s2 = "", ""
-    print check_permutation(s1, s2)
+    assert check_permutation(s1, s2) == False
 
+def test_str1_empty():
     s1, s2 = "", "edba"
-    print check_permutation(s1, s2)
+    assert check_permutation(s1, s2) == False
+def test_str2_empty():
+    s1, s2 = "abde", ""
+    assert check_permutation(s1, s2) == False
+def test_both_empty():
+    s1, s2 = "", ""
+    assert check_permutation(s1, s2) == True

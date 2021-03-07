@@ -1,3 +1,4 @@
+import pytest
 '''
 Implement an algorithm to determine if a string has all unique characters.
 What if you cannot use additional data structures?
@@ -25,16 +26,20 @@ def is_unique(word):
     
     return True
 
+def test_not_unique():
+    words = ["abracadrabra", "xybzzbyx"]
+    for word in words:
+        assert is_unique(word) == False
 
+def test_unique():
+    word = "xybz"
+    assert is_unique(word) == True
 
-if __name__ == "__main__":
-    s = "abracadabra"
-    print is_unique(s)
-    
-    s = "xybz"
-    print is_unique(s)
-
-    s = "xybzzbyx"
-    print is_unique(s)
+def test_single_letter():
+    word = "a"
+    assert is_unique(word) == True
+def test_empty_string():
+    word = ""
+    assert is_unique(word) == False
 
 

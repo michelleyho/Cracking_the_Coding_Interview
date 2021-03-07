@@ -27,11 +27,8 @@ def urlify(phrase, length):
             right_ptr -= 3
 
         left_ptr -= 1
-    print new_phrase
     return ''.join(new_phrase)
 
-
-if __name__ == "__main__":
+def test_urlify():
     p, l = "Mr John Smith    ", 13
-    print urlify(p, l)
-
+    assert urlify(p, l) == "Mr%20John%20Smith"
